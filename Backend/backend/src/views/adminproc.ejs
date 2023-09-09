@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-C
+    ompatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+
+    />
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .topnav{
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/create">Create Account</a>
+        <a href="/login" style="float: right;"> Login</a>
+        <a href="/add-Card"> AddCard</a>
+        <a class="active" href="/HomeCards">Danh sách Card</a>
+        <a href="/Homeloai">Danh sách loai</a>
+
+      </div>
+      <form action = "/Homecards" method="get">
+        <input name = "key" type="text">
+        <input type="submit" value="Search">
+
+      </form>
+    <div class="container">
+      <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Tên Card</th>
+            <th>Số Lượng</th>
+            <th>Giá Chính Hãng</th>
+            <th>Gía Sale</th>
+            <th>Hình ảnh</th>
+            <th>Discount</th>
+            <th>MaLoai</th>
+            <th>Hang</th>
+            <th>Chuc nang</th>
+        </thead>
+        <%
+              for(var i=0; i<data.length; i++){  %>
+                
+                <tr>
+                  <td><%=data[i]?.id%></td>
+                  <td><%=data[i]?.title %></td>
+                  <td><%=data[i]?.quantity %></td>
+                  <td><%=data[i]?.price %></td>
+                  <td><%=data[i]?.pricesale%></td>
+                  <td><img style = "width: 200px; height: 200px" src ="../image/MSI-GTX-1050-G.jpg"></td>
+                  <td><%=data[i]?.discount%></td>
+                  <td><%=data[i]?.MaLoai%></td>
+                  <td><%=data[i]?.Hang%></td>
+
+  
+                  <td>
+                    <a href="/edit/<%=data[i]?.id%>" class="btn btn-primary">Sửa</a>
+                    <a href="/delete/<%=data[i]?.id%>" class="btn btn-danger">Xóa</a>
+                  </td>
+                </tr>
+
+                  <% } %>
+
+
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

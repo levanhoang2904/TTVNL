@@ -1,0 +1,46 @@
+
+
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Card</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+      />
+    </head>
+    <body>
+      <div class="topnav" >
+        <a  href="/" style="text-decoration: none;">Home</a>
+        <a  href="/create" style="text-decoration: none;">Create Account</a>
+        <a  href="/login" style="float: right; text-decoration: none;">Login</a>
+        <a class ="active" href="/add-Card" style="text-decoration: none;">Add Card</a>
+        <a href="/HomeCards" style="text-decoration: none;">Danh sách Card</a>
+        <a href="/Homeloai">Danh sách loai</a>
+
+    
+      </div>
+      <div class="container mt-3">
+        <h3 class="text-center">Update Loai</h3>
+        <form action="/updateloai" method="post">
+            <label for="name">Maloai</label>
+            <input type="text" name="ML" class="form-control" value="<%=data.maloai%>">
+            <label for="SL">TenLoai</label>
+            <input type="text" name="TL" class="form-control" value="<%=data.TenLoai%>">
+            
+            <input type="submit" value="Update" class="btn btn-primary mt-2"> <br>
+            <a href="/">Quay lại?</a>
+        </form>
+       </div>
+    
+       
+    
+    </body>
+    </html>

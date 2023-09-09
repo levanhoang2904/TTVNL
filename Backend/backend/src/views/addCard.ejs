@@ -1,0 +1,55 @@
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Card</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <div class="topnav" >
+    <a  href="/" style="text-decoration: none;">Home</a>
+    <a  href="/create" style="text-decoration: none;">Create Account</a>
+    <a  href="/login" style="float: right; text-decoration: none;">Login</a>
+    <a class ="active" href="/add-Card" style="text-decoration: none;">Add Card</a>
+    <a href="/HomeCards" style="text-decoration: none;">Danh sách Card</a>
+    <a href="/Homeloai">Danh sách loai</a>
+
+
+  </div>
+  <div class="container mt-3">
+   <h3 class="text-center">Thêm Card</h3>
+   <form action="/add-card-result" method="post">
+       <label for="name">title</label>
+       <input type="text" name="name" class="form-control">
+       <label for="SL">quantity</label>
+       <input type="text" name="SL" class="form-control">
+       <label for="class">price</label>
+       <input type="text" name="GB" class="form-control">
+       <label for="class">pricesale</label>
+       <input type="text" name="GBS" class="form-control">
+       <label for="class">imagecategory</label>
+       <input type="text" name="HA" class="form-control">
+       <label for="class">Discount</label>
+       <input type="text" name="DC" class="form-control">
+       <label for="class">MaLoai</label>
+       <input type="text" name="ML" class="form-control">
+       <label for="class">Hang</label>
+       <input type="text" name="Hang" class="form-control">
+       <input type="submit" value="Thêm mới" class="btn btn-primary mt-2"> <br>
+       <a href="/">Quay lại?</a>
+   </form>
+  </div>
+</body>
+</html>

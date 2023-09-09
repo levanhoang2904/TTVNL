@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+  
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .topnav{
+    width: 100%;
+  }
+</style>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/create">Create Account</a>
+        <a href="/login" style="float: right;"> Login</a>
+        <a href="/add-Card"> AddCard</a>
+        <a class="active" href="/HomeCards">Danh sách Card</a>
+
+      </div>
+
+      <div class="container " style = "width: 100%">
+        <!-- <a href="add.html" class="btn btn-info">Thêm mới học sinh</a> -->
+        <table class="table" >
+          <thead>
+            <th>Id</th>
+            <th>Tên Card</th>
+            <th>Số Lượng</th>
+            <th>Giá Chính Hãng</th>
+            <th>Gía Sale</th>
+            <th>Hình ảnh</th>
+            <th>Discount</th>
+            <th>MaLoai</th>
+            <th>Hang</th>
+
+  
+          </thead>
+          <tbody>
+            <%
+              for(var i=0; i<data.length; i++){  %>
+                
+                <tr>
+                  <td><%=data[i]?.id%></td>
+                  <td><%=data[i]?.title %></td>
+                  <td><%=data[i]?.quantity %></td>
+                  <td><%=data[i]?.price %></td>
+                  <td><%=data[i]?.pricesale%></td>
+                  <td><%=data[i]?.imagecategory%></td>
+                  <td><%=data[i]?.discount%></td>
+                  <td><%=data[i]?.MaLoai%></td>
+                  <td><%=data[i]?.Hang%></td>
+
+  
+                  <td>
+                    <a href="/edit/<%=data[i]?.id%>" class="btn btn-primary">Sửa</a>
+                    <a href="/delete/<%=data[i]?.id%>" class="btn btn-danger">Xóa</a>
+                  </td>
+                </tr>
+
+                  <% } %>
+
+          </tbody>
+        </table>
+      </div>
+      
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-C
+    ompatible" content="ie=edge" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+
+    />
+  </head>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .topnav{
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/create">Create Account</a>
+        <a href="/login" style="float: right;"> Login</a>
+        <a href="/add-Card"> AddCard</a>
+        <a href="/HomeCards">Danh sách Card</a>
+        <a class="active" href="/Homeloai">Danh sách loai</a>
+
+
+      </div>
+      <div class="container mt-3">
+        <h3 class="text-center">Thêm Loai</h3>
+        <form action="/addloai" method="post">
+            <label for="name">MaLoai</label>
+            <input type="text" name="ML" class="form-control" value="<%=data.title%>">
+            <label>TenLoai</label>
+            <input type="text" name="TL" class="form-control" value="<%=data.quantity%>">
+            <input type="submit" value="Thêm mới" class="btn btn-primary mt-2"> <br>
+
+        </form>
+       </div>
+    
+    <div class="container">
+      <table class="table">
+        <thead>
+        
+            <th>Tên loai</th>
+            <th>Ma loai</th>
+            <th>Chuc nang</th>
+        </thead>
+        <%
+              for(var i=0; i<data.length; i++){  %>
+                
+                <tr>
+                
+                  <td><%=data[i]?.TenLoai %></td>
+                  <td><%=data[i]?.MaLoai%></td>
+                 
+
+  
+                  <td>
+                    <a href="/editloai/<%=data[i]?.MaLoai%>" class="btn btn-primary">Sửa</a>
+                    <a href="/deleteloai/<%=data[i]?.MaLoai%>" class="btn btn-danger">Xóa</a>
+                  </td>
+                </tr>
+
+                  <% } %>
+
+
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

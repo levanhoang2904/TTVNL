@@ -1,0 +1,24 @@
+@import 'normalize.css';
+
+:root {
+    --height-input: 40px;
+    --height-header: 118px;
+    --primary-color: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+}

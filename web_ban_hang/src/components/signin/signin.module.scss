@@ -1,0 +1,119 @@
+.singin {
+    background-color: #fff;
+    width: 500px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 20px;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        span {
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    form {
+        margin-top: 30px;
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+
+    input {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid red;
+    }
+
+    .forgotpas {
+        align-self: flex-end;
+        font-style: italic;
+        color: red;
+        cursor: pointer;
+    }
+
+    .button {
+        background-color: red;
+        border-radius: 5px;
+        border: none;
+        margin-top: 30px;
+    }
+
+    .btnlogin {
+        padding: 15px 20px;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .signanotherway {
+        text-align: center;
+        margin-top: 30px;
+        .text {
+            color: #c38f8f;
+        }
+
+        .btnsigin {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                display: flex;
+                font-weight: bold;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 10px;
+                width: 50%;
+                text-transform: uppercase;
+                border-radius: 5px;
+                color: #fff;
+                border: none;
+                font-size: 13px;
+                cursor: pointer;
+                .icon {
+                    margin-right: 20px;
+                    font-size: 16px;
+                }
+            }
+
+            .google {
+                margin-right: 10px;
+                background-color: #df4a32;
+            }
+
+            .facebook {
+                background-color: #3b5998;
+            }
+        }
+    }
+
+    .register {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 15px;
+
+        a {
+            color: blueviolet;
+        }
+    }
+}

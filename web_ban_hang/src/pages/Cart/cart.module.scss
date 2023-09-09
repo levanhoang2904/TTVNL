@@ -1,0 +1,113 @@
+.cart {
+    margin-top: 120px;
+    background-color: #f0f0f0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .wrap {
+        padding: 100px 50px;
+        width: 1200px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        .nocart {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .icon {
+                font-size: 100px;
+            }
+            h1 {
+                margin-top: 30px;
+            }
+        }
+
+        .havecart {
+            .cartlist {
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid #000;
+                padding-bottom: 20px;
+                .imgproduct {
+                    height: 50px;
+                    width: auto;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+    
+                .infoproduct {
+                    margin-left: 20px;
+                    width: 500px;
+                   
+                    p{
+                        width: 100%;
+                    }
+                }
+               
+                .amount {
+                    margin-left: 30px;
+                    display: flex;
+                    margin-right: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    button {
+                        margin-right: 20px;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                    }
+    
+                    span {
+                        margin-right: 20px;
+                    }
+                }
+
+                .thanhtien {
+                    width: 100px;
+                    padding-right: 30px;
+                }
+    
+                .btnClose {
+                    padding: 10px 20px;
+                    background-color: blue;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+
+                }
+                .iconclose {
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                
+            }
+
+            
+            .sub{
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                h2 {
+                    color: red;
+                    
+                }
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            .datmua {
+                padding: 10px 20px;
+                margin-top: 30px;
+                border: none;
+                color: #fff;
+                font-weight: bold;  
+                              
+                background-color: blue;
+                cursor: pointer;
+            }
+        }
+    }
+}

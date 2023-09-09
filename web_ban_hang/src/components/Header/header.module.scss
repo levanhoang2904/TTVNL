@@ -1,0 +1,194 @@
+// @import '../GlobalStyles/GlobalStyles.module.scss';
+
+.header {
+    height: var(--height-header);
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    .logo {
+        height: 150px;
+        margin-right: 30px;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+.right {
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        height: var(--height-input);
+        // overflow: hidden;
+        flex: 1;
+        margin-right: 20px;
+        label {
+            color: black;
+            text-align: center;
+            border-right: 1px solid #ccc;
+            line-height: 40px;
+            height: 100%;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        input {
+            height: 100%;
+            border: none;
+            width: 100%;
+            outline: none;
+            padding: 0 10px;
+        }
+
+        .input {
+            width: 100%;
+            position: relative;
+        }
+
+        .searchsuggest {
+            background-color: white;
+            width: 100%;
+            min-height: 100px;
+            position: absolute;
+            top: var(--height-input);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            display: none;
+            z-index: 1;
+            li {
+                list-style: none;
+                padding: 10px 10px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+
+    input:focus ~ .searchsuggest {
+        display: block;
+    }
+
+    .iconsearch {
+        font-size: 25px;
+    }
+
+    button {
+        height: 40px;
+        padding: 0 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #dcbfc2;
+        }
+    }
+}
+
+.left {
+    display: flex;
+
+    .cart {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        position: relative;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        .iconCart {
+            font-size: 30px;
+            margin-right: 10px;
+            padding: 20px 20px;
+            border-radius: 50%;
+            &:hover {
+                background-color: red;
+            }
+        }
+
+        .ammount {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            background-color: yellow;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        p {
+            margin-left: 20px;
+            margin-right: 30px;
+            font-size: 20px;
+            color: white;
+        }
+
+      
+    }
+
+    .account {
+        display: flex;
+        align-items: center;
+        color: white;
+        .iconUser {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: transparent;
+            padding: 10px 10px;
+            width: 100px;
+            border-radius: 10px;
+            margin: 5px;
+            cursor: pointer;
+
+            outline: none;
+            color: white;
+
+            &:hover {
+                background-color: red;
+            }
+        }
+
+        .login {
+            display: flex;
+        }
+
+        .loginactive {
+            display: flex;
+            align-items: center;
+            .name {
+                margin-left: 10px;
+            }
+
+            button {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+}

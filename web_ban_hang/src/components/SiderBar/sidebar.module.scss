@@ -1,0 +1,101 @@
+.sidebar {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+
+    .category {
+        position: absolute;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        min-height: 200px;
+        justify-content: flex-start;
+        margin-left: 10px;
+        // align-items: center;
+
+        .iconcategory {
+            display: flex;
+            align-items: center;
+            padding: 10px 10px;
+            h2 {
+                margin-left: 20px;
+                font-size: 18px;
+                color: red;
+                font-weight: bold;
+            }
+        }
+
+        .categorylists {
+            .categorylist {
+                position: relative;
+                padding: 10px 10px;
+                border-top: 1px solid #c29b9b;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                &:hover {
+                    background-color: #ccc;
+                    cursor: pointer;
+                }
+
+                &:hover .ramlists {
+                    display: block;
+                }
+
+                span {
+                    .ramlists {
+                        position: absolute;
+                        background-color: red;
+                        left: 200px;
+                        top: 0;
+                        z-index: 1;
+                        min-width: 200px;
+                        background-color: #fff;
+                        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+                        display: none;
+                        z-index: 2;
+
+                        .ramlist {
+                            padding: 10px 10px;
+                            height: 100%;
+
+                            &:hover {
+                                background-color: #ccc;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                color: red;
+                            }
+                        }
+                    }
+                }
+
+                .iconlist {
+                    width: 30px;
+                    object-fit: contain;
+                    margin-right: 10px;
+                }
+
+                .iconright {
+                    display: flex;
+                    flex: 1;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    .categorys {
+        flex: 1;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 200px;
+        min-height: 600px;
+    }
+}
